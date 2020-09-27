@@ -124,8 +124,8 @@ def setup_ios_device_template(env: dict, opts: iOSOpts, target: str):
     LDFLAGS = []
 
     # https://github.com/mono/mono/issues/19393
-    if os.environ.get('DISABLE_NO_WEAK_IMPORTS', '0') != '1':
-        LDFLAGS += ['-Wl,-no_weak_imports']
+    # if os.environ.get('DISABLE_NO_WEAK_IMPORTS', '0') != '1':
+    #     LDFLAGS += ['-Wl,-no_weak_imports']
 
     LDFLAGS += [
     	'-arch %s' % arch,
